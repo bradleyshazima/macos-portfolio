@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'SF Pro Display', sans-serif;
+}
+
+/* LOCK SCREEN */
+
+main {
+    background: url(../images/wallpaper6.jpg);
+    min-height: 100vh;
+    min-width: 10vw;
+    background-position: center;
+    background-size: cover;
+    color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.topBar {
+    width: 100%;
+    height: 1.5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-weight: 500;
+    padding: 0 2rem;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.topBar .inputKey, .topBar img, .topBar div{
+    margin: 0 0.5rem;
+}
+
+.logIn {
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+.logIn h3 {
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 504px;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.avatar {
+    position: absolute;
+    top: 280px;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 20rem;
+    background-color: blueviolet;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem;
+}
+
+.avatar .profilePic {
+    height: 80%;
+    width: auto;
+}
+
+.passWord {
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 556px
+}
+
+.passWord input {
+    outline: none;
+    height: 2rem;
+    width: 12rem;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    z-index: 9;
+    padding: 0 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: rgba(255, 255, 255, 0.4);
+    border: .3px solid rgba(255, 255, 255, .25);
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, .25);
+    backdrop-filter: blur(25px);
+}
+
+.cancelOperation {
+    position: absolute;
+    bottom: 0;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cancelOperation .cancelIcon {
+    height: 2.5rem;
+    width: 2.5rem;
+    background-color: rgba(240, 248, 255, 0.3);
+    border-radius: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
+
+.cancelOperation .xCancelMark {
+    border: 2px solid #faebd7;
+    border-radius: 10rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cancelOperation p {
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+}

@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'SF Pro Display', sans-serif;
+}
+
+main {
+    min-width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #000000;
+    background-position: center;
+    background-size: cover;
+}
+
+.appleIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.appleIcon svg {
+    height: 200px;
+    width: auto;
+}
+
+svg path {
+    stroke: #6f00ff;
+    stroke-width: 0.1px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    animation: neon 5s linear infinite;
+    filter: drop-shadow(0 0 0.1px #6f00ff) drop-shadow(0 0 0.4px #6f00ff) drop-shadow(0 0 1px #6f00ff);
+}
