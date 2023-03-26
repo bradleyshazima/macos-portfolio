@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/ubuntu" rel="stylesheet">
 </head>
 <body>
 
@@ -76,8 +76,8 @@
         <!-- ---------------------------------------------------MAIN DESKTOP AREA WITH DESKTOP ICONS----------------------------------------------------------- -->
 
         <div class="desktopArea">
-            <div id="application" class="applicationIcon">
-                <div class="icon"  style="background-image: url(../images/1blocker.png);"></div>
+            <div id="wallpaperShuffle" class="applicationIcon">
+                <div class="icon"  style="background-image: url(../images/wallpaperApp.png);"></div>
                 <div class="iconName">Wallpaper</div>
             </div>
             <div class="applicationIcon">
@@ -85,60 +85,44 @@
                 <div class="iconName">Figma</div>
             </div>
             <div class="applicationIcon">
-                <div class="icon" style="background-image: url(../images/finder.png);"></div>
-                <div class="iconName">Finder</div>
+                <div class="icon" style="background-image: url(../images/mimestream.png);"></div>
+                <div class="iconName">Mimestream</div>
             </div>
             <div class="applicationIcon">
                 <div class="icon" style="background-image: url(../images/photos.png);"></div>
                 <div class="iconName">Photos</div>
             </div>
             <div class="applicationIcon">
-                <div class="icon" style="background-image: url(../images/hypercal.png);"></div>
-                <div class="iconName">Hypercal</div>
+                <div class="icon" style="background-image: url(../images/messages.png);"></div>
+                <div class="iconName">Messages</div>
             </div>
             <div class="applicationIcon">
-                <div class="icon" style="background-image: url(../images/shazam.png);"></div>
-                <div class="iconName">Shazam</div>
+                <div class="icon" style="background-image: url(../images/filesafe.png);"></div>
+                <div class="iconName">Filesafe</div>
             </div>
             <div class="applicationIcon">
                 <div class="icon terminalApp" style="background-image: url(../images/terminal.png);"></div>
                 <div class="iconName">Terminal</div>
             </div>
             <div class="applicationIcon">
-                <div class="icon" style="background-image: url(../images/logic-pro.png);"></div>
-                <div class="iconName">Logic Pro</div>
+                <div class="icon" style="background-image: url(../images/clock.png);"></div>
+                <div class="iconName">Clock</div>
             </div>
             <div class="applicationIcon">
                 <div class="icon" style="background-image: url(../images/github.png);"></div>
                 <div class="iconName">GitHub</div>
             </div>
             <div class="applicationIcon">
-                <div class="icon" style="background-image: url(../images/maps.png);"></div>
-                <div class="iconName">Maps</div>
+                <div class="icon" style="background-image: url(../images/safari.png);"></div>
+                <div class="iconName">Safari</div>
             </div>
             <div class="applicationIcon">
-                <div class="icon" style="background-image: url(../images/messages.png);"></div>
-                <div class="iconName">Messages</div>
-            </div>
-            <div class="applicationIcon">
-                <div class="icon" style="background-image: url(../images/microsoft-excel.png);"></div>
-                <div class="iconName">Excel</div>
-            </div>
-            <div class="applicationIcon">
-                <div class="icon" style="background-image: url(../images/app-store.png);"></div>
-                <div class="iconName">App Store</div>
-            </div>
-            <div class="applicationIcon">
-                <div class="icon" style="background-image: url(../images/coduo-pair-coding.png);"></div>
-                <div class="iconName">Coduo</div>
+                <div class="icon" style="background-image: url(../images/notes.png);"></div>
+                <div class="iconName">Notes</div>
             </div>
             <div class="applicationIcon">
                 <div class="icon" style="background-image: url(../images/chatgpt-icon.svg); height: 5rem; width: 5rem; margin-top: 0.5rem;"></div>
                 <div class="iconName">Chat</div>
-            </div>
-            <div class="applicationIcon">
-                <div class="icon" style="background-image: url(../images/hidock.png);"></div>
-                <div class="iconName">Hidock</div>
             </div>
         </div>
 
@@ -173,7 +157,7 @@
                 <div class="terminalTitle">Terminal - Bradley Shazima</div>
             </div>
             <div class="tTextArea">
-                Last login: Fri Feb 24 17:38:03 on ttys00<br/>bradley@bradleys-MacBook-Pro ~ % softwareupdate --fetch-full-installer
+                <p>Last login: Fri Feb 24 17:38:03 on ttys00<br/>bradley@bradleys-MacBook-Pro ~ % softwareupdate --fetch-full-installer</p>
             </div>
         </div>
 
@@ -181,7 +165,7 @@
 
 <!-- ---------------------------------------------------OPEN AI CHAT GPT WINDOW----------------------------------------------------------- -->
 
-        <div class="appWindow maxWindow" id="chatWindow">
+        <div class="appWindow activeWindow" id="chatWindow" onmousedown="startResize(event)">
             <div class="titleBar" id="chatWindowBar">
                 <div class="trafficLights">
                     <div class="tRed"></div>
@@ -209,7 +193,7 @@
                     </div>
                     <div class="chatTxtInputArea">
                         <div class="chatInputTextBox">
-                            <input type="text" class="chatTextInput">
+                            <textarea class="chatTextInput"></textarea>
                             <button class="absolute p-1 rounded-md text-gray-500 bottom-1.5 md:bottom-2.5 hover:bg-gray-100 dark:hover:text-gray-400 dark:hover:bg-gray-900 disabled:hover:bg-transparent dark:disabled:hover:bg-transparent right-1 md:right-2">
                                 <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 mr-1" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                                     <line x1="22" y1="2" x2="11" y2="13"></line>

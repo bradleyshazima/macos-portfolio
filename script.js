@@ -1,7 +1,6 @@
 // ---------------------------------------------------------------BACKGROUND CHANGER ICON----------------------------------------------------------
 
-
-const shuffleBtn = document.querySelector("#application");
+const shuffleBtn = document.querySelector("#wallpaperShuffle");
 const mainDiv = document.querySelector("main");
 var images = ['wallpaper1.png',
                 'wallpaper2.jpg',
@@ -343,38 +342,32 @@ function makeDraggable(windowElement, topBarElement) {
 
 
 
+// ----------------------------------------------------------- OPEN APPS WHEN CLICKING ON ICONS -----------------------------------------------------
+
+// const appIcons = document.querySelectorAll('.applicationIcon');
 
 
-const appIcons = document.querySelectorAll('.applicationIcon');
+// for (const appIcon of appIcons) {
+//   appIcon.addEventListener('click', (event) => {
+//     const iconName = event.currentTarget.querySelector('.iconName').textContent.toLowerCase();
+//     const appWindow = document.querySelector(`#${iconName}Window`);
+
+//     if (document.querySelector('.activeWindow')) {
+//       appWindow.classList.remove('inactiveWindow');
+//       appWindow.classList.add('activeWindow');
+//       appWindow.style.z-index = 5;
+//     }
+//     else {
+//       appWindow.classList.remove('inactiveWindow');
+//       appWindow.classList.add('activeWindow');
+//       }
+    
 
 
-for (const appIcon of appIcons) {
-  appIcon.addEventListener('click', (event) => {
-    const iconName = event.currentTarget.querySelector('.iconName').textContent.toLowerCase();
-    const appWindow = document.querySelector(`#${iconName}Window`);
-
-    // Remove "inactiveWindow" and add "activeWindow" to the classList
-    appWindow.classList.remove('inactiveWindow');
-    appWindow.classList.add('activeWindow');
-
-    openWindow(appWindow, appIcon);
-  });
-}
+//     openWindow(appWindow, appIcon);
+//   });
+// }
 
 
 
-
-// Get all active windows
-const activeWindow = document.querySelectorAll('.activeWindow');
-
-// Add click event listener to each active window
-activeWindow.forEach(window => {
-  window.addEventListener('click', () => {
-    // Get the highest z-index among all active windows
-    const highestZIndex = Math.max(...Array.from(activeWindow).map(w => Number(w.style.zIndex) || 0));
-
-    // Set the clicked window's z-index to one higher than the highest z-index
-    window.style.zIndex = highestZIndex + 100;
-  });
-});
 

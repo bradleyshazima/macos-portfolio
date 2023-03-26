@@ -1,14 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
-
-
-
 /* -------------------------------------------------------------- UNIVERSAL STYLES ------------------------------------------------------ */
+:root {
+    --ubuntuRegular: 'Ubuntu', sans-serif;
+    --ubuntuCondensed: 'Ubuntu Condensed', sans-serif;
+    --menlo: 'Menlo', sans-serif;
+    --sfPro: 'SF Pro Display', sans-serif;
+}
+
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'SF Pro Display', sans-serif;
+    font-family: var(--sfPro);
     user-select: none;
 }
 
@@ -74,6 +77,7 @@ body {
     letter-spacing: -0.35px;
     mix-blend-mode: hard-light;
     text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    font-family: var(--sfPro);
 }
 
 .topBar .menuItems ul {
@@ -234,6 +238,11 @@ body {
     border-radius: 10px;
     overflow: hidden;
     filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.15)) drop-shadow(0px 25px 30px rgba(0, 0, 0, 0.35));
+    resize: both;
+}
+
+.activeWindow.resizable {
+    cursor: nwse-resize;
 }
 
 .inactiveWindow {
@@ -307,10 +316,13 @@ body {
     height: calc(100% - 1.75rem);
     color: rgba(255, 255, 255, 0.8);
     padding: 1rem;
-    font-family: 'Menlo', sans-serif;
     font-size: 14px;
     white-space: pre-line;
     user-select: text;
+}
+
+.tTextArea p {
+    font-family: var(--menlo);
 }
 
 ::selection {
@@ -362,7 +374,6 @@ body {
 }
 
 .chatHome {
-    background-color: #61C554;
     height: 20rem;
     width: 20rem;
     display: flex;
@@ -370,7 +381,11 @@ body {
     align-items: center;
     justify-content: center;
     font-family: unset;
-    font-family: 'Ubuntu', sans-serif;
+}
+
+.chatHome .chatHeading h1{
+    font-family: var(--ubuntuRegular);
+    font-weight: 800;
 }
 
 .chatTxtInputArea {
@@ -389,26 +404,58 @@ body {
 .chatInputTextBox {
     width: 80%;
     max-width: 768px;
-    height: 50px;
+    /* height: 50px; */
+    max-width: 400px;
     border-radius: .375rem;
     background-color: #444653;
-    padding: .75rem;
+    padding: 12px;
     box-shadow: 0 0 transparent, 0 0 15px rgba(0,0,0,.1);
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     font-family: inherit;
+    position: relative;
 }
 
 .chatTextInput {
-    height: 24px;
-    width: 80%;
-    background-color: transparent;
+    height: auto;
+    min-height: 24px;
+    max-height: max-content;
+    word-wrap: break-word;
+    min-width: 100%;
+    max-width: 100%;
+    /* background-color: transparent; */
     border: none;
     outline: none;
-    color: white;
+    /* color: white; */
     font-size: 1.25rem;
     tab-size: 4;
     font-family: 'Ubuntu', sans-serif;
     font-size: 1rem;
+    overflow-y: visible;
+}
+
+.chatInputTextBox button {
+    height: 24px;
+    width: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+    position: absolute;
+    right: 8px;
+    bottom: 10px;
+    z-index: 2;
+}
+
+.chatInputTextBox  button:hover {
+    background-color: #202123;
+}
+
+.chatInputTextBox  button svg {
+    height: 16px;
+    width: 16px;
+    color: rgba(142,142,160);
 }
