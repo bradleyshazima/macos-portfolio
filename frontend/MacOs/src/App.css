@@ -1,0 +1,45 @@
+@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
+@import url('https://fonts.cdnfonts.com/css/ubuntu');
+@import url('https://fonts.cdnfonts.com/css/menlo');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  --ubuntu: 'Ubuntu', sans-serif;
+  --menlo: 'Menlo', sans-serif;
+  --sfPro: 'SF Pro Display', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--sfPro);
+  user-select: none;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  /* background-color: black; */
+  overflow: hidden;
+}
+
+#main {
+  background-image: url("./assets/wallpaper1.jpg");
+}
+
+
+.separator {
+  height: 80%;
+  width: 2px;
+  background-color: #ffffff66;
+  margin: 0 4px;
+}
