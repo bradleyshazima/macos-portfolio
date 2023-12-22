@@ -18,9 +18,9 @@ const TopBar = () => {
         const amPm = currentHour >= 12 ? 'PM' : 'AM';
 
   return (
-    <div className='top-0 left-0 w-[100vw] h-6 bg-[#ffffff80] flex items-center justify-between px-3 py-0 overflow-hidden'>
-        <div className="menuBars">
-            <ul className='flex items-center justify-center h-full px-2 font-medium text-sm text-[#000000c2] mix-blend-hard-light tracking-[-0.35px] gap-4'>
+    <div className='top-0 left-0 w-[100vw] h-6 flex items-center justify-between px-3 py-0 overflow-hidden bg-[rgba(0,0,0,0.2)] backdrop-blur-xl'>
+          <div className="menuBars">
+            <ul className='flex items-center justify-center h-full px-2 font-medium text-sm text-[rgba(255,255,255,0.9)] mix-blend-hard-light tracking-[-0.35px] gap-4'>
                 <li><img src={darkApple} alt="apple-logo"/></li>
                 <li><div className="finder font-bold">Finder</div></li>
                 <li><div className="file">File</div></li>
@@ -33,7 +33,7 @@ const TopBar = () => {
         </div>
 
         <div className="menuItems">
-            <ul className='h-full flex items-center justify-center gap-4 text-sm font-medium px-2 text-[#000000c2] mix-blend-hard-light tracking-[-0.35px]'>
+            <ul className='h-full flex items-center justify-center gap-4 text-sm font-normal px-2 text-[rgba(255,255,255,0.9)] mix-blend-hard-light tracking-[-0.35px]'>
                 <li className='h-full'><img src={wifi} alt="wifi icon" /></li>
                 <li className='h-full'><img src={battery} alt="battery icon" /></li>
                 <li className='h-full'><img src={macSwitch} alt="switch icon" /></li>
@@ -44,7 +44,7 @@ const TopBar = () => {
                     </div>
                 </li>
             </ul>
-        </div>
+          </div>
     </div>
   )
 };

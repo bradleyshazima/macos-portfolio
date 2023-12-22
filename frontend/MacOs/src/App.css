@@ -41,6 +41,16 @@ body {
 .separator {
   height: 80%;
   width: 2px;
-  background-color: #ffffff66;
+  background-color: hsla(0, 0%, 100%, 0.3);
   margin: 0 4px;
+}
+
+.topBarBlur {
+  background: rgba(79, 79, 79, 0.20);
+  backdrop-filter: blur(32.5px);
+}
+
+.topBarColorBurn {
+  background: #8f8f8f;
+  mix-blend-mode: color-burn;
 }
